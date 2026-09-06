@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Night Pipers — Building Technology for the Inner World</title>
+  <meta name="description" content="Night Pipers creates mindful consumer technology combining ancient wisdom, astrology, restorative sleep, and contextual AI to help you understand yourself better.">
+  <meta name="keywords" content="Night Pipers, Mind Your Stars, astrology, mindfulness, sleep, moon, self-discovery, mental wellbeing, reflection, inner world">
+  <meta property="og:title" content="Night Pipers — Technology for the Inner World">
+  <meta property="og:description" content="Explore your inner world with thoughtful technology rooted in astrology, mindfulness, and reflective AI.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Background Dynamic Starfield Canvas -->
+  <canvas id="starfield-canvas"></canvas>
+
+  <!-- Ambient Glows -->
+  <div class="cosmic-glow-top"></div>
+  <div class="cosmic-glow-mid"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand-logo" aria-label="Night Pipers Home">
+        <div class="brand-icon">
+          <!-- Lunar Icon -->
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8A9.044 9.044 0 0 0 12 3z"/>
+          </svg>
+        </div>
+        <span>Night Pipers</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#flagship">Mind Your Stars</a></li>
+          <li><a href="#ecosystem">Products</a></li>
+          <li><a href="#ai-reflection">Contextual AI</a></li>
+          <li><a href="#sanctuary">Sanctuary</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#flagship" class="btn btn-primary btn-sm">Get App</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#philosophy">Philosophy</a></li>
+      <li><a href="#flagship">Mind Your Stars</a></li>
+      <li><a href="#ecosystem">Products</a></li>
+      <li><a href="#ai-reflection">Contextual AI</a></li>
+      <li><a href="#sanctuary">Sanctuary</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Service</a></li>
+    </ul>
+    <a href="#flagship" class="btn btn-primary" style="margin-top: 10px; width: 100%;">Download on App Store</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      
+      <!-- Live Lunar Phase Badge -->
+      <div class="badge-lunar">
+        <span class="badge-dot"></span>
+        <span>Lunar Phase: <strong id="current-moon-phase">Waxing Crescent</strong> · <span id="current-moon-illum">--%</span></span>
+      </div>
+
+      <h1 class="hero-title">
+        Building Technology<br>for the Inner World
+      </h1>
+
+      <p class="hero-subtitle">
+        How can we understand ourselves better? Night Pipers crafts mindful, personalized products uniting ancient celestial traditions, restorative sleep, and reflective intelligence.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#flagship" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-2 0.6-2.65 1.35-.58.66-1.08 1.73-.95 2.76.99.08 2.05-.51 2.68-1.26z"/>
+          </svg>
+          Explore Mind Your Stars
+        </a>
+        <a href="#philosophy" class="btn btn-secondary btn-lg">Our Philosophy</a>
+      </div>
+
+      <!-- Celestial Luminous Moon Component -->
+      <div class="hero-moon-wrapper">
+        <div class="lunar-orb">
+          <div class="lunar-craters"></div>
+        </div>
+        <div class="lunar-orbit-ring">
+          <div class="lunar-orbit-particle"></div>
+        </div>
+      </div>
+
+      <!-- Hero Metrics / Pillars -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-value">A Mirror</span>
+          <span class="stat-label">Not An Authority</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">Contextual</span>
+          <span class="stat-label">Personal Reflection AI</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">Ancient & New</span>
+          <span class="stat-label">Timeless Wisdom</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Philosophy Section: The Mirror -->
+  <section id="philosophy" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Philosophy</span>
+        <h2 class="section-title">Technology as a Mirror, Not an Authority</h2>
+        <p class="section-description">
+          We believe technology has become exceptionally good at helping people understand the world around them. But when it comes to understanding ourselves, most digital experiences remain fragmented, generic, or overly clinical.
+        </p>
+      </div>
+
+      <div class="philosophy-grid">
+        <div>
+          <div class="quote-box">
+            <p>"We don't build technology to tell people who they are. We build technology that helps people discover more about who they are."</p>
+          </div>
+          <p style="color: var(--text-secondary); margin-bottom: 16px;">
+            A person is more than their personality type. More than their zodiac sign. More than their habits. More than their past experiences. And more than the data generated by their devices.
+          </p>
+          <p style="color: var(--text-secondary);">
+            Human beings are complex, constantly changing, and shaped by many different forces. Our products therefore bring together astrology, mindfulness, psychology frameworks, and restorative sleep into a unified daily mirror.
+          </p>
+        </div>
+
+        <div class="card-glass mirror-card">
+          <h3 style="font-family: var(--font-serif); font-size: 1.8rem;">The Distinction in Action</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            How traditional predictive apps differ from our reflection-first architecture:
+          </p>
+
+          <div class="comparison-row">
+            <div class="comp-box comp-negative">
+              <h4>Generic Predictions</h4>
+              <p>"This is what will happen to you today."</p>
+              <span style="font-size: 0.78rem; color: #fca5a5; display: block; margin-top: 8px;">Creates passive reliance and anxiety</span>
+            </div>
+            <div class="comp-box comp-positive">
+              <h4>Night Pipers Reflection</h4>
+              <p>"What does this make you notice about yourself?"</p>
+              <span style="font-size: 0.78rem; color: #7dd3fc; display: block; margin-top: 8px;">Encourages curiosity and agency</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 10px; padding: 14px; background: rgba(255,255,255,0.03); border-radius: var(--radius-md); border: 1px dashed var(--border-subtle);">
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">
+              ✦ Helps people notice what they might otherwise overlook: a recurring emotional pattern, a relationship dynamic, a personal strength, or a question they have been avoiding.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flagship Product Spotlight: Mind Your Stars -->
+  <section id="flagship" class="section">
+    <div class="container">
+      <div class="flagship-card">
+        <div>
+          <div class="flagship-badge">✦ Our Flagship Application</div>
+          <h2 class="flagship-title">Mind Your Stars</h2>
+          <p class="flagship-desc">
+            A modern astrology and self-discovery experience designed for personal reflection rather than generic horoscopes.
+          </p>
+
+          <ul class="flagship-features">
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span><strong>Birth Information & Cosmic Chart:</strong> Tailored specifically to your precise time, date, and location for deeper individual context.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span><strong>Recurring Patterns & Life Phases:</strong> Understand relationship dynamics, emotional rhythms, and current themes in your journey.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span><strong>A Continuous Picture:</strong> Pairs cosmic frameworks with your daily journals, moods, and sleep patterns.</span>
+            </li>
+          </ul>
+
+          <div class="app-store-badge-group">
+            <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="app-store-btn" id="appstore-hero-redirect">
+              <svg viewBox="0 0 24 24">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-2 0.6-2.65 1.35-.58.66-1.08 1.73-.95 2.76.99.08 2.05-.51 2.68-1.26z"/>
+              </svg>
+              <div class="app-store-text">
+                <span class="app-store-sub">Download on the</span>
+                <span class="app-store-main">App Store</span>
+              </div>
+            </a>
+
+            <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="app-store-btn" id="playstore-hero-redirect">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12 3.84 21.85C3.34 21.61 3 21.09 3 20.5M16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12M20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81M6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z"/>
+              </svg>
+              <div class="app-store-text">
+                <span class="app-store-sub">Get it on</span>
+                <span class="app-store-main">Google Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Phone App Preview Mockup -->
+        <div class="app-mockup-wrapper">
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-chart-header">
+                <h5>Today's Cosmic Reflection</h5>
+                <h4>Moon in Pisces · 12th House</h4>
+              </div>
+
+              <div class="phone-zodiac-wheel"></div>
+
+              <div class="phone-card-insight">
+                <span>✦ Reflection Prompt</span>
+                "Where in your life are you holding quiet tension that is ready to be released into rest?"
+              </div>
+
+              <div class="phone-card-insight">
+                <span>✦ Recurring Pattern</span>
+                Heightened creative intuition during nighttime cycles. Consider nighttime journaling before sleep.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Suite / The 5 Pillars -->
+  <section id="ecosystem" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">A Family of Products</span>
+        <h2 class="section-title">Designed for Every Aspect of the Human Experience</h2>
+        <p class="section-description">
+          Although these experiences exist as focused applications, they are connected by one underlying philosophy: <em>Understand yourself.</em>
+        </p>
+      </div>
+
+      <div class="products-grid">
+        <!-- 1. Self-Discovery -->
+        <div class="card-glass product-card">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <h3>Self-Discovery</h3>
+          <p>Products that help people understand who they are through astrology, personality exploration, values, identity, and personal patterns.</p>
+          <div class="product-tags">
+            <span class="tag-pill">Mind Your Stars</span>
+            <span class="tag-pill">Astrology</span>
+            <span class="tag-pill">Identity</span>
+          </div>
+        </div>
+
+        <!-- 2. Mindfulness & Mental Wellbeing -->
+        <div class="card-glass product-card">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12A10 10 0 0 1 12 2z"></path>
+              <path d="M12 6a6 6 0 0 1 6 6c0 3.31-2.69 6-6 6s-6-2.69-6-6a6 6 0 0 1 6-6z"></path>
+            </svg>
+          </div>
+          <h3>Mindfulness & Wellbeing</h3>
+          <p>Become more aware of your thoughts, emotions, and attention through meditation, conscious breathwork, gratitude, and guided reflection.</p>
+          <div class="product-tags">
+            <span class="tag-pill">Meditation</span>
+            <span class="tag-pill">Breathing</span>
+            <span class="tag-pill">Emotional State</span>
+          </div>
+        </div>
+
+        <!-- 3. Sleep & Restoration -->
+        <div class="card-glass product-card">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </div>
+          <h3>Sleep & Restoration</h3>
+          <p>Create healthier rituals around rest and recovery with nighttime reflections, celestial soundscapes, and lunar alignment routines.</p>
+          <div class="product-tags">
+            <span class="tag-pill">Night Rituals</span>
+            <span class="tag-pill">Soundscapes</span>
+            <span class="tag-pill">Recovery</span>
+          </div>
+        </div>
+
+        <!-- 4. Relationships -->
+        <div class="card-glass product-card">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Relationships</h3>
+          <p>Explore interpersonal dynamics, communication styles, emotional compatibilities, and shared reflections with the people in your life.</p>
+          <div class="product-tags">
+            <span class="tag-pill">Compatibility</span>
+            <span class="tag-pill">Communication</span>
+            <span class="tag-pill">Dynamics</span>
+          </div>
+        </div>
+
+        <!-- 5. Personal Growth -->
+        <div class="card-glass product-card">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+              <polyline points="16 7 22 7 22 13"></polyline>
+            </svg>
+          </div>
+          <h3>Personal Growth</h3>
+          <p>Reflect on where you are going and what you want to become through habits, life transitions, personal rituals, and long-term reflection.</p>
+          <div class="product-tags">
+            <span class="tag-pill">Transitions</span>
+            <span class="tag-pill">Rituals</span>
+            <span class="tag-pill">Long-Term</span>
+          </div>
+        </div>
+
+        <!-- 6. Connected Philosophy -->
+        <div class="card-glass product-card" style="border-color: var(--border-glow); background: linear-gradient(180deg, rgba(20, 26, 46, 0.6) 0%, rgba(9, 14, 24, 0.9) 100%);">
+          <div class="product-icon" style="background: rgba(168, 85, 247, 0.2); color: #d8b4fe;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3>One Unified Ecosystem</h3>
+          <p>Your astrological profile, journal entries, mindfulness logs, and sleep patterns combine securely into a continuous, non-clinical mirror of self.</p>
+          <div class="product-tags">
+            <span class="tag-pill">Synchronized</span>
+            <span class="tag-pill">Private</span>
+            <span class="tag-pill">Holistic</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Personal Reflection Layer -->
+  <section id="ai-reflection" class="section ai-section">
+    <div class="container">
+      <div class="ai-split">
+        <div>
+          <span class="section-tag">Contextual Intelligence</span>
+          <h2 class="section-title">The Role of Artificial Intelligence</h2>
+          <p class="section-description" style="margin-bottom: 24px;">
+            We don't want to build another generic AI chatbot. Our vision is an AI experience that becomes increasingly personal and contextual over time.
+          </p>
+          <p style="color: var(--text-secondary); margin-bottom: 20px;">
+            Instead of simply answering questions, our technology helps users reflect, connect ideas, identify patterns, and explore different perspectives.
+          </p>
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); padding: 20px; border-radius: var(--radius-md);">
+            <p style="color: var(--lunar-white); font-size: 0.95rem; margin: 0;">
+              The AI becomes a <strong>personal reflection layer</strong> — helping users make sense of their experiences rather than simply generating generic content.
+            </p>
+          </div>
+        </div>
+
+        <!-- AI Dialogue Example Box -->
+        <div class="ai-prompt-box">
+          <div class="ai-dialog-bubble bubble-user">
+            <div class="bubble-avatar avatar-user">You</div>
+            <div>
+              <p style="color: #cbd5e1; font-size: 0.88rem; margin-bottom: 4px; font-weight: 600;">Daily Journal & Astrological Context</p>
+              <p style="color: var(--text-secondary); font-size: 0.85rem;">
+                "I've been feeling scattered all week, struggling to finish creative tasks. Full Moon in Leo is approaching."
+              </p>
+            </div>
+          </div>
+
+          <div class="ai-dialog-bubble bubble-ai">
+            <div class="bubble-avatar avatar-ai">NP</div>
+            <div>
+              <p style="color: #d8b4fe; font-size: 0.88rem; margin-bottom: 4px; font-weight: 600;">Night Pipers Reflection Layer</p>
+              <p style="color: #cbd5e1; font-size: 0.85rem;">
+                Looking back at your logs over the past 3 lunar cycles, similar creative tension occurred right before major expressive breakthroughs.
+              </p>
+              <ul class="ai-question-list">
+                <li>What pressure are you placing on the outcome vs. the process?</li>
+                <li>What might happen if you let tonight be restorative rather than productive?</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Sleep & Mindfulness Sanctuary Widget -->
+  <section id="sanctuary" class="section">
+    <div class="container">
+      <div class="sanctuary-container">
+        <span class="section-tag">Restorative Ritual</span>
+        <h2 class="section-title">Night Sanctuary</h2>
+        <p class="section-description" style="max-width: 600px; margin: 0 auto;">
+          Prepare your mind for sleep and reflection. Follow the gentle lunar breath rhythm to reset your nervous system.
+        </p>
+
+        <div class="breathing-circle-wrapper">
+          <div id="breathing-orb" class="breathing-orb">
+            <span id="breath-action">Breathe</span>
+          </div>
+        </div>
+
+        <p id="breath-timer" class="breathing-timer-label">Find stillness before sleep & reflection</p>
+
+        <div class="breathing-controls">
+          <button id="breath-toggle-btn" class="btn btn-primary">Begin Breathing</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Store Download CTA Banner -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Technology for the Inner World</h2>
+        <p>
+          A small moment of reflection every day. A deeper understanding over time. Available now on iOS and Android.
+        </p>
+        <div class="app-store-badge-group" style="justify-content: center;">
+          <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="app-store-btn">
+            <svg viewBox="0 0 24 24">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-2 0.6-2.65 1.35-.58.66-1.08 1.73-.95 2.76.99.08 2.05-.51 2.68-1.26z"/>
+            </svg>
+            <div class="app-store-text">
+              <span class="app-store-sub">Download on the</span>
+              <span class="app-store-main">App Store</span>
+            </div>
+          </a>
+          <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="app-store-btn">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12 3.84 21.85C3.34 21.61 3 21.09 3 20.5M16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12M20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81M6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z"/>
+            </svg>
+            <div class="app-store-text">
+              <span class="app-store-sub">Get it on</span>
+              <span class="app-store-main">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8A9.044 9.044 0 0 0 12 3z"/>
+              </svg>
+            </div>
+            <span>Night Pipers</span>
+          </a>
+          <p>
+            Building technology for the inner world. Thoughtful, personalized products to explore your personality, emotions, sleep, and patterns.
+          </p>
+          <div style="margin-top: 16px;">
+            <span class="footer-legal-badge">🔒 End-to-End Encrypted Cloud Sync</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#flagship">Mind Your Stars</a></li>
+            <li><a href="#ecosystem">Self-Discovery</a></li>
+            <li><a href="#ecosystem">Mindfulness & Sleep</a></li>
+            <li><a href="#ecosystem">Relationships</a></li>
+            <li><a href="#ecosystem">Personal Growth</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Night Pipers</a></li>
+            <li><a href="about.html#manifesto">Our Manifesto</a></li>
+            <li><a href="about.html#not-fortune-telling">What We Are Not</a></li>
+            <li><a href="about.html#ancient-wisdom">Ancient Wisdom</a></li>
+            <li><a href="mailto:support@nightpipers.com">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Privacy</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="privacy.html#data-storage">Daily Data Storage</a></li>
+            <li><a href="privacy.html#account-deletion">Account Deletion</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html#app-store-compliance">App Store Disclosures</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Night Pipers Inc. All rights reserved. Building technology for the inner world.</p>
+        <p>Disclaimer: Our products are designed for self-reflection and personal growth. They do not provide medical advice or predictive fortune telling.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy & Data Practices — Night Pipers</title>
+  <meta name="description" content="App Store and Google Play compliant Privacy Policy for Night Pipers and Mind Your Stars. Learn how user authentication, daily reflection data, and astrological inputs are securely handled.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Dynamic Starfield Canvas Background -->
+  <canvas id="starfield-canvas"></canvas>
+
+  <div class="cosmic-glow-top"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand-logo" aria-label="Night Pipers Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8A9.044 9.044 0 0 0 12 3z"/>
+          </svg>
+        </div>
+        <span>Night Pipers</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#philosophy">Philosophy</a></li>
+          <li><a href="index.html#flagship">Mind Your Stars</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="privacy.html" class="active">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html#flagship" class="btn btn-primary btn-sm">Get App</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#philosophy">Philosophy</a></li>
+      <li><a href="index.html#flagship">Mind Your Stars</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Service</a></li>
+    </ul>
+  </div>
+
+  <!-- Header Section -->
+  <section class="legal-page-header">
+    <div class="container container-narrow">
+      <span class="badge-lunar">Legal & Compliance</span>
+      <h1 class="hero-title" style="font-size: clamp(2.5rem, 5vw, 3.8rem); margin-bottom: 16px;">
+        Privacy Policy
+      </h1>
+      <p class="hero-subtitle" style="margin-bottom: 0;">
+        Effective Date: September 1, 2026 · Last Updated: September 6, 2026<br>
+        Compliant with Apple App Store Guidelines, Google Play Developer Policies, GDPR & CCPA.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Legal Content -->
+  <main class="legal-content">
+    <div class="container container-narrow">
+      <div class="legal-card" id="app-store-compliance">
+        
+        <div class="legal-alert">
+          <p>
+            <strong>Our Privacy Pledge:</strong> At Night Pipers, we believe the inner world is sacred. Your journal entries, birth details, mood check-ins, and daily reflections belong exclusively to you. We do not sell your personal data, nor do we use your private thoughts to train public foundational AI models.
+          </p>
+        </div>
+
+        <h2>1. Overview & Applications Covered</h2>
+        <p>
+          This Privacy Policy explains how <strong>Night Pipers Inc.</strong> ("Night Pipers", "we", "us", or "our") collects, uses, encrypts, and protects your information across our mobile applications (including <strong>Mind Your Stars</strong>, future family of apps) and associated backend cloud services.
+        </p>
+        <p>
+          This document serves as the official Privacy Policy referenced in mobile app store listings and in-app redirection links.
+        </p>
+
+        <h2 id="data-collection">2. Information We Collect</h2>
+        <p>
+          To provide personalized reflection, astrological analysis, and secure synchronisation across your devices, we collect the following categories of data:
+        </p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Data Elements</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Account & Authentication</strong></td>
+              <td>Email address, unique user ID, salted & hashed password, or tokenized credentials (Sign in with Apple / Google Sign-In).</td>
+              <td>Secure user authentication, account recovery, and cross-device sync.</td>
+            </tr>
+            <tr>
+              <td><strong>Astrological Profile</strong></td>
+              <td>Date of birth, exact time of birth, birth city/geographic coordinates.</td>
+              <td>Mathematical calculation of planetary ephemeris, natal chart placements, and current transits in Mind Your Stars.</td>
+            </tr>
+            <tr>
+              <td><strong>Daily User Reflections</strong></td>
+              <td>Daily mood logs, sleep quality & nighttime ritual notes, journal reflections, guided meditation responses.</td>
+              <td>Stored securely to compile your personal history, reveal recurring emotional patterns, and display self-understanding trends.</td>
+            </tr>
+            <tr>
+              <td><strong>Device & Diagnostics</strong></td>
+              <td>App version, device model, operating system version, crash reports.</td>
+              <td>Maintaining app reliability, debugging performance, and preventing fraudulent activity.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="data-storage">3. Backend Storage & Security Architecture</h2>
+        <p>
+          Night Pipers utilizes enterprise-grade cloud infrastructure to store and manage your daily reflections and account data.
+        </p>
+        <ul>
+          <li><strong>Encryption in Transit:</strong> All communications between your mobile device and our backend servers are encrypted using modern Transport Layer Security (TLS 1.3).</li>
+          <li><strong>Encryption at Rest:</strong> All stored personal identifiers, journal entries, and astrological data are encrypted at rest using AES-256 standards.</li>
+          <li><strong>Zero Data Selling:</strong> We never sell, lease, or monetize your personal information or reflection entries to data brokers, ad networks, or third parties.</li>
+        </ul>
+
+        <h2>4. The Role of Artificial Intelligence & Reflection</h2>
+        <p>
+          Our proprietary reflection engine utilizes advanced AI models to connect themes across your astrological transits and daily reflections.
+        </p>
+        <ul>
+          <li><strong>Ephemeral Processing:</strong> Prompts sent for contextual reflection analysis are processed in transient inference environments and are not permanently retained by LLM infrastructure providers.</li>
+          <li><strong>No Model Training:</strong> Your private journal entries, dreams, emotional disclosures, and birth details are strictly barred from training public generative models.</li>
+        </ul>
+
+        <h2 id="account-deletion">5. User Rights, Data Export & Account Deletion</h2>
+        <p>
+          In accordance with Apple App Store Guideline 5.1.1(v), Google Play User Data policies, the European General Data Protection Regulation (GDPR), and the California Consumer Privacy Act (CCPA/CPRA), you have complete control over your data:
+        </p>
+        
+        <h3>A. Self-Service In-App Deletion</h3>
+        <p>
+          You may delete your account and all associated data directly within any of our apps at any time:
+        </p>
+        <ol style="margin-left: 24px; margin-bottom: 16px; color: var(--text-secondary);">
+          <li>Open the app (e.g. <strong>Mind Your Stars</strong>).</li>
+          <li>Navigate to <strong>Settings</strong> ➔ <strong>Account & Security</strong>.</li>
+          <li>Tap <strong>Delete Account & Purge Data</strong> and confirm.</li>
+        </ol>
+        <p>
+          This action irreversibly erases your profile, authentication records, birth charts, journal logs, and history from our live databases within 72 hours.
+        </p>
+
+        <h3>B. Web & Email Erasure Request</h3>
+        <p>
+          If you have uninstalled the app or prefer to request deletion externally, email our Data Protection team at <a href="mailto:privacy@nightpipers.com" style="color: var(--lunar-blue);">privacy@nightpipers.com</a> with the subject line <em>"Request for Account Deletion"</em> from your registered email address. We will verify your identity and permanently delete all records within 30 days.
+        </p>
+
+        <h3>C. Data Portability & Export</h3>
+        <p>
+          You have the right to receive an export of your daily logs and astrological data in a standard JSON or CSV format. In-app export is available under <strong>Settings ➔ Privacy & Data Export</strong>.
+        </p>
+
+        <h2>6. Third-Party Service Providers</h2>
+        <p>
+          We partner with select, highly vetted infrastructure providers who adhere to strict data security standards:
+        </p>
+        <ul>
+          <li><strong>Authentication Providers:</strong> Apple (Sign in with Apple) and Google (Google Identity Services) for tokenized, secure logins.</li>
+          <li><strong>Cloud Infrastructure:</strong> AWS / Google Cloud Platform for hosting encrypted databases and serverless APIs.</li>
+          <li><strong>App Store Payments:</strong> All premium subscriptions are processed directly through Apple StoreKit or Google Play In-App Billing; Night Pipers never sees or stores your credit card details.</li>
+        </ul>
+
+        <h2>7. Children's Privacy</h2>
+        <p>
+          Our services are not designed for or directed to children under the age of 13 (or under 16 in the EEA/UK). We do not knowingly collect personal information from minors. If we learn that a child has provided us with personal data, we will take immediate steps to purge such data from our systems.
+        </p>
+
+        <h2>8. Changes to This Privacy Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time to reflect product enhancements, legal requirements, or evolving industry standards. If material changes are made, we will notify you through an in-app notice and update the "Last Updated" date at the top of this policy.
+        </p>
+
+        <h2 id="contact">9. Contact Us</h2>
+        <p>
+          If you have any questions, concerns, or requests regarding this Privacy Policy or your daily personal data, please contact our Data Protection Officer:
+        </p>
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); padding: 20px; border-radius: var(--radius-md); margin-top: 12px;">
+          <p style="margin-bottom: 4px; color: #ffffff;"><strong>Night Pipers Inc.</strong></p>
+          <p style="margin-bottom: 4px; color: var(--text-secondary);">Attention: Privacy & Compliance Office</p>
+          <p style="margin-bottom: 4px; color: var(--text-secondary);">Email: <a href="mailto:privacy@nightpipers.com" style="color: var(--lunar-blue);">privacy@nightpipers.com</a></p>
+          <p style="margin-bottom: 0; color: var(--text-secondary);">General Support: <a href="mailto:support@nightpipers.com" style="color: var(--lunar-blue);">support@nightpipers.com</a></p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8A9.044 9.044 0 0 0 12 3z"/>
+              </svg>
+            </div>
+            <span>Night Pipers</span>
+          </a>
+          <p>Building technology for the inner world. Privacy first, always.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="index.html#flagship">Mind Your Stars</a></li>
+            <li><a href="index.html#ecosystem">Self-Discovery</a></li>
+            <li><a href="index.html#ecosystem">Mindfulness & Sleep</a></li>
+            <li><a href="index.html#ecosystem">Relationships</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#manifesto">Manifesto</a></li>
+            <li><a href="mailto:support@nightpipers.com">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="#account-deletion">Data Deletion</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="mailto:privacy@nightpipers.com">Privacy Officer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Night Pipers Inc. All rights reserved.</p>
+        <p>App Store Compliant Data Policy.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
